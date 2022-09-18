@@ -13,13 +13,14 @@ df_prods.index = df_prods['index']
  
 st.write(df_prods.index)
 st.header('Analisis de la red seleccionada')
+st.dataframe(df_prods)
 
 
 #AgGrid(df_prods)
 
-if st.button('Limpiar'):
-    df_prods= pd.DataFrame()
-    st.session_state['saved_nets']= df_prods
+# if st.button('Limpiar'):
+#     df_prods= pd.DataFrame()
+#     st.session_state['saved_nets']= df_prods
 
 
 
@@ -27,7 +28,7 @@ if st.button('Limpiar'):
 
 df_arranged= df_prods.copy()
 
-fig = plt.figure(figsize=(10, 4))
-sns.barplot( data = df_prods, x = "index", y = "densidad" )
-st.pyplot(fig)
+# fig = plt.figure(figsize=(10, 4))
+# sns.barplot( data = df_prods, x = "index", y = "densidad" )
+# st.pyplot(fig)
 
