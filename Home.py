@@ -221,8 +221,11 @@ red_metrics_df = pd.DataFrame(data = red_metrics)
 ###Guardar metricas con un nombre específico
 #######
 
+try:
 
-saved_nets= st.session_state['saved_nets']
+    saved_nets= st.session_state['saved_nets']
+except:
+    pass
 
 if st.button('Guardar red'):
     rdata= red_metrics_df.copy()
