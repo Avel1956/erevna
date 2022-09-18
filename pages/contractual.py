@@ -5,7 +5,7 @@ import networkx as nx
 from pyvis.network import Network
 
 
-df_contract = pd.read_excel('input\RRHH completo-test2.xlsx', 'RRHH_global') #archivo de personal de la Alianza
+df_contract= pd.read_pickle('inpun/contr_source.pkl') #archivo de personal de la Alianza
 df_contract['Semestre']= df_contract.Semestre.astype(str)
 df_contract['ID']= df_contract.ID.astype(str)
 df_contract['CVLAC']= df_contract.CVLAC.astype(str)
