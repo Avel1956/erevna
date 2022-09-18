@@ -1,0 +1,592 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d2" for="edge" attr.name="color" attr.type="string" />
+  <key id="d1" for="node" attr.name="color" attr.type="string" />
+  <key id="d0" for="node" attr.name="sel" attr.type="long" />
+  <graph edgedefault="undirected">
+    <node id="Universidad CESMAG">
+      <data key="d0">1</data>
+      <data key="d1">#B2F227</data>
+    </node>
+    <node id="Universidad de Nariño">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="UNIVERSIDAD DEL VALLE">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="UNIVERSIDAD DE NARIÑO">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Universidad de los Andes">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Instituto Nacional de Electricidad y Energias Limpias">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Universidad Autonoma del Estado de Morelos">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="UNIVERSIDAD DE ANTIOQUIA">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="UTFPR">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="CECE-UNIOESTE">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="INSTITUTO TECNOLOGICO METROPOLITANO">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="DEPARTAMENTO DE INGENIERIA MECANICA">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Institucion Universitaria TdeA">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="National Applied Science Institute (INSA)">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="UNIVERSIDAD INDUSTRIAL DE SANTANDER">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="UNIVERSIDAD DE PAMPLONA">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="UNIVERSIDAD AUTONOMA DEL CARIBE">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Universitat Jaume I">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Yeungnam University">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="University of Valencia">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Unitat Mixta d'Investigacio UV-UJI">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="EPFL">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Humboldt Universitat">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Universidad Tecnica Federico Santa Maria">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Instituto Militar de Engenharia">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="SUMICOL">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Universidad Francisco de Paula Santander">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Instituto Tecnológico Metropolitano">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="University of Utah">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="UNIVERSIDAD DE CASTILLA LA MANCHA">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="PONTIFICIA UNIVERSIDAD JAVERIANA">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="University of Cambridge">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Beijing Institute of Technology">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="JOHN RAMIRO AGUDELO SANTAMARÍA">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Instituto de Investigacion en recursos Cinergeticos">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="UNIVERSIDAD DE LA SABANA">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Columbia University">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Universidad de La&#10;Sabana">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="INSTITUCION UNIVERSITARIA PASCUAL BRAVO">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Federal University of Goias">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Universidad Nacional de San Juan">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="UNIVERSITY OF ANTWERP">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Corporacion Universitaria Minuto de Dios">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Estacio Univerity">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Universidad Santiago de Cali">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Universidad de Chile">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Imperial College London">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="YPF Tecnologia S.A">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Universidad EAFIT">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Hokkaido University">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="National Institute for Material Science (NIMS)">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Tokyo Metropolitan University">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="University of Yamanashi">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Instituto Tecnologico de Antioquia">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="Frigosinu">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <node id="UNIVERSIDAD DE CORDOBA">
+      <data key="d0">0</data>
+      <data key="d1">white</data>
+    </node>
+    <edge source="Universidad CESMAG" target="Universidad CESMAG">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Universidad CESMAG" target="Universidad de Nariño">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Universidad CESMAG" target="UNIVERSIDAD DEL VALLE">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Universidad CESMAG" target="UNIVERSIDAD DE NARIÑO">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Universidad CESMAG" target="Universidad de los Andes">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Universidad de Nariño" target="UNIVERSIDAD DEL VALLE">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Universidad de Nariño" target="UNIVERSIDAD DE NARIÑO">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Universidad de Nariño" target="Universidad de los Andes">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DEL VALLE" target="UNIVERSIDAD DEL VALLE">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DEL VALLE" target="Instituto Nacional de Electricidad y Energias Limpias">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DEL VALLE" target="Universidad Autonoma del Estado de Morelos">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DEL VALLE" target="Universidad Santiago de Cali">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DEL VALLE" target="Universidad de Chile">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DEL VALLE" target="Universidad de los Andes">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE NARIÑO" target="Universidad de los Andes">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Universidad de los Andes" target="Universidad Santiago de Cali">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Universidad de los Andes" target="Universidad de Chile">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Instituto Nacional de Electricidad y Energias Limpias" target="Instituto Nacional de Electricidad y Energias Limpias">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Instituto Nacional de Electricidad y Energias Limpias" target="Universidad Autonoma del Estado de Morelos">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="UNIVERSIDAD DE ANTIOQUIA">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="UTFPR">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="CECE-UNIOESTE">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="INSTITUTO TECNOLOGICO METROPOLITANO">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="DEPARTAMENTO DE INGENIERIA MECANICA">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="Institucion Universitaria TdeA">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="National Applied Science Institute (INSA)">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="UNIVERSIDAD INDUSTRIAL DE SANTANDER">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="UNIVERSIDAD DE PAMPLONA">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="UNIVERSIDAD AUTONOMA DEL CARIBE">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="Universitat Jaume I">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="Yeungnam University">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="University of Valencia">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="Unitat Mixta d'Investigacio UV-UJI">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="EPFL">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="Humboldt Universitat">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="Universidad Tecnica Federico Santa Maria">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="Instituto Militar de Engenharia">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="SUMICOL">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="Universidad Francisco de Paula Santander">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="Instituto Tecnológico Metropolitano">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="University of Utah">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="UNIVERSIDAD DE CASTILLA LA MANCHA">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="PONTIFICIA UNIVERSIDAD JAVERIANA">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="University of Cambridge">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="Beijing Institute of Technology">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="JOHN RAMIRO AGUDELO SANTAMARÍA">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="Instituto de Investigacion en recursos Cinergeticos">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="INSTITUCION UNIVERSITARIA PASCUAL BRAVO">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="Federal University of Goias">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="Universidad Nacional de San Juan">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="UNIVERSITY OF ANTWERP">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="Corporacion Universitaria Minuto de Dios">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="Estacio Univerity">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="Imperial College London">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="YPF Tecnologia S.A">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="Universidad EAFIT">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="Hokkaido University">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="National Institute for Material Science (NIMS)">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="Tokyo Metropolitan University">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="University of Yamanashi">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="Instituto Tecnologico de Antioquia">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="Frigosinu">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE ANTIOQUIA" target="UNIVERSIDAD DE CORDOBA">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UTFPR" target="UTFPR">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UTFPR" target="CECE-UNIOESTE">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="CECE-UNIOESTE" target="Estacio Univerity">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="CECE-UNIOESTE" target="CECE-UNIOESTE">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="INSTITUTO TECNOLOGICO METROPOLITANO" target="INSTITUTO TECNOLOGICO METROPOLITANO">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="INSTITUTO TECNOLOGICO METROPOLITANO" target="INSTITUCION UNIVERSITARIA PASCUAL BRAVO">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Institucion Universitaria TdeA" target="Institucion Universitaria TdeA">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD INDUSTRIAL DE SANTANDER" target="UNIVERSIDAD DE PAMPLONA">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD INDUSTRIAL DE SANTANDER" target="UNIVERSIDAD INDUSTRIAL DE SANTANDER">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD INDUSTRIAL DE SANTANDER" target="Universitat Jaume I">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD INDUSTRIAL DE SANTANDER" target="Yeungnam University">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD INDUSTRIAL DE SANTANDER" target="University of Valencia">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD INDUSTRIAL DE SANTANDER" target="Unitat Mixta d'Investigacio UV-UJI">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE PAMPLONA" target="UNIVERSIDAD DE PAMPLONA">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE PAMPLONA" target="Universitat Jaume I">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE PAMPLONA" target="Yeungnam University">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE PAMPLONA" target="University of Valencia">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE PAMPLONA" target="Unitat Mixta d'Investigacio UV-UJI">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD AUTONOMA DEL CARIBE" target="UNIVERSIDAD AUTONOMA DEL CARIBE">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Universitat Jaume I" target="Yeungnam University">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Universitat Jaume I" target="University of Valencia">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Universitat Jaume I" target="Unitat Mixta d'Investigacio UV-UJI">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Yeungnam University" target="University of Valencia">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Yeungnam University" target="Unitat Mixta d'Investigacio UV-UJI">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="University of Valencia" target="University of Valencia">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="University of Valencia" target="Unitat Mixta d'Investigacio UV-UJI">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Unitat Mixta d'Investigacio UV-UJI" target="Unitat Mixta d'Investigacio UV-UJI">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="EPFL" target="Humboldt Universitat">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="EPFL" target="EPFL">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Humboldt Universitat" target="Humboldt Universitat">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Universidad Tecnica Federico Santa Maria" target="Instituto Militar de Engenharia">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Universidad Francisco de Paula Santander" target="Instituto Tecnológico Metropolitano">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="University of Utah" target="University of Utah">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE CASTILLA LA MANCHA" target="UNIVERSIDAD DE CASTILLA LA MANCHA">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE CASTILLA LA MANCHA" target="Instituto de Investigacion en recursos Cinergeticos">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="University of Cambridge" target="Beijing Institute of Technology">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="University of Cambridge" target="University of Cambridge">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE LA SABANA" target="UNIVERSIDAD DE LA SABANA">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE LA SABANA" target="Columbia University">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSIDAD DE LA SABANA" target="Universidad de La&#10;Sabana">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Columbia University" target="Columbia University">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Universidad de La&#10;Sabana" target="Universidad de La&#10;Sabana">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Federal University of Goias" target="Federal University of Goias">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="UNIVERSITY OF ANTWERP" target="UNIVERSITY OF ANTWERP">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Universidad Santiago de Cali" target="Universidad de Chile">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Universidad de Chile" target="Universidad de Chile">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Imperial College London" target="Imperial College London">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Universidad EAFIT" target="Universidad EAFIT">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Hokkaido University" target="Hokkaido University">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Hokkaido University" target="National Institute for Material Science (NIMS)">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Hokkaido University" target="Tokyo Metropolitan University">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Hokkaido University" target="University of Yamanashi">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="National Institute for Material Science (NIMS)" target="Tokyo Metropolitan University">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="National Institute for Material Science (NIMS)" target="University of Yamanashi">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="National Institute for Material Science (NIMS)" target="National Institute for Material Science (NIMS)">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Tokyo Metropolitan University" target="University of Yamanashi">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+    <edge source="Frigosinu" target="UNIVERSIDAD DE CORDOBA">
+      <data key="d2">#8E9F7D</data>
+    </edge>
+  </graph>
+</graphml>
