@@ -19,7 +19,7 @@ st.header('Analisis de la red seleccionada')
 
 if st.button('Limpiar'):
     df_prods= pd.DataFrame()
-    df_prods.to_pickle('output\saved_nets.pkl')
+    st.session_state['saved_nets']= df_prods
 
 
 

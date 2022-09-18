@@ -222,7 +222,7 @@ red_metrics_df = pd.DataFrame(data = red_metrics)
 #######
 
 
-saved_nets= pd.read_pickle('output\saved_nets.pkl')
+saved_nets= st.session_state['saved_nets']
 
 if st.button('Guardar red'):
     rdata= red_metrics_df.copy()
