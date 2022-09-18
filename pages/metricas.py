@@ -7,7 +7,7 @@ import matplotlib as plt
 import numpy as np
 
 
-df_prods= pd.read_pickle('output\saved_nets.pkl')
+df_prods= st.session_state['saved_nets']
 df_prods['index']= np.arange(1, df_prods.shape[0] + 1)
 df_prods.index = df_prods['index']
  

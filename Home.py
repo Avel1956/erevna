@@ -229,7 +229,8 @@ if st.button('Guardar red'):
     
     
     saved_nets= pd.concat([saved_nets, rdata])
-    saved_nets.to_pickle('output\saved_nets.pkl')
+    st.session_state['saved_nets'] = saved_nets
+    
 
 
 ######inicializar objeto pyvis
