@@ -1,4 +1,5 @@
 from asyncore import write
+from operator import index
 import streamlit as st
 
 #from st_aggrid import AgGrid
@@ -26,24 +27,12 @@ csv,
 key='download-csv'
 )
 
-    
+fig, ax= plt.subplots()
+sns.barplot(
+    data=df_prods, 
+    x= 'index', 
+    y= 'densidad', 
+    ax= ax
+    )
 
-
-
-
-#AgGrid(df_prods)
-
-# if st.button('Limpiar'):
-#     df_prods= pd.DataFrame()
-#     st.session_state['saved_nets']= df_prods
-
-
-
-
-
-
-
-# fig = plt.figure(figsize=(10, 4))
-# sns.barplot( data = df_prods, x = "index", y = "densidad" )
-# st.pyplot(fig)
-
+st.pyplot(fig)
