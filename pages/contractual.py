@@ -106,7 +106,7 @@ try:
 except:
     camino_mas_corto = "No existe un camino entre los nodos seleccionados"
 name_target = st.selectbox(
-    'Seleccione el nodo objetivo ',
+    'Seleccione el nodo destino',
     list(G.nodes()))
 color_net = sel_prop(G, name) 
 
