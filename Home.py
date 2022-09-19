@@ -167,7 +167,7 @@ with col1:
     components.html(HtmlFile.read(), height=600)
 with col2:
     st.subheader('Métricas de red')
-    st.write('La densidad de la red es:')
+    
     
     st.dataframe(red_metrics_df)
   
