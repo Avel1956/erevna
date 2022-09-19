@@ -64,6 +64,7 @@ G=nx.from_pandas_edgelist(df_sel, 'source', 'target')
 name = st.selectbox('Seleccione el nodo principal ',
     list(G.nodes()))
 color_net = sel_prop(G, name) 
+st.write(color_net)
 nx.write_graphml_lxml(color_net, "output\\net.graphml")
 #Creación de caja de selección del nodo 2 
 
