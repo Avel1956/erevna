@@ -168,7 +168,7 @@ with col1:
 with col2:
     st.subheader('Métricas de red')
     st.write('La densidad de la red es:')
-    st.dataframe(red_metrics_df)
+    st.dataframe(red_metrics_df.T)
     st.subheader('Métricas del nodo seleccionado')
     st.dataframe(node_metrics_df)
 
