@@ -59,7 +59,7 @@ def find_items_prod(opciones, df):
 
     filtered_df= pd.DataFrame(border_list, columns=['source', 'target'])
     return filtered_df
-    
+
 def find_items_contr(opciones, df):
     
     
@@ -142,7 +142,7 @@ def red_metrics(G, query):
     num_nodes= G.number_of_nodes()
     num_bordes= G.number_of_edges()
     dens_red= nx.density(G)
-    comm_red= nx.communicability(G)
+    #comm_red= nx.communicability(G)
     esta_conectada= nx.is_connected(G)
     no_componentes= nx.number_connected_components(G)
     componentes= nx.connected_components(G)
@@ -152,7 +152,7 @@ def red_metrics(G, query):
     'num_nodos': [num_nodes],
     'num_bordes': [num_bordes], 
     'densidad': [dens_red],
-    'Comunicabilidad': [comm_red],
+    #'Comunicabilidad': [comm_red],
     'Está completamente conectada': [esta_conectada],
     'Cuantas subredes': [no_componentes]} 
     red_metrics_df = pd.DataFrame(data = red_metrics)
