@@ -168,8 +168,10 @@ with col1:
 with col2:
     st.subheader('Métricas de red')
     st.write('La densidad de la red es:')
-    red_metrics_df_transp= red_metrics_df.transpose()
-    st.dataframe(red_metrics_df_transp)
+    
+    st.dataframe(red_metrics_df)
+    for column in red_metrics_df.columns:
+        st.write(column)
     st.subheader('Métricas del nodo seleccionado')
     st.dataframe(node_metrics_df)
 
