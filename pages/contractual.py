@@ -79,7 +79,7 @@ except:
     pass
 
 if st.button('Guardar red'):
-    rdata= df_ini.copy()
+    rdata= red_metrics_df.copy()
     
     
     saved_nets= pd.concat([saved_nets, rdata])
