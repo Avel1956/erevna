@@ -23,7 +23,7 @@ with st.sidebar:
     st.title('Visualización de las redes de colaboración de la Alianza SÉNECA')
     st.write('Seleccione el tipo de red')
     periodo = st.multiselect('Seleccione el rango de periodos a consultar',  
-    ['todos','1.0', '2.0', '3.0', '4.0', '5.0', '6.0',
+    ['todos', '2.0', '3.0', '4.0', '5.0', '6.0',
      '7.0', '8.0', '9.0', '10.0'], default= 'todos')
     tipo_red= st.multiselect('Tipo(s) de red',['todos', 'aut_net', 'group_net', 'inst_net'], default= 'inst_net')
     proyecto = st.multiselect('Seleccione el (o los) proyectos participantes en la red', 
@@ -165,8 +165,13 @@ col1, col2= st.columns([3,1])
 
 with col1:
     st.subheader('Red seleccionada')
-    Htmlprod = open('output\\PG.html', 'r', encoding='utf-8')
-    components.html(HtmlFile.read(), height=600)
+    try:
+        
+        Htmlprod = open('output\\PG.html', 'r', encoding='utf-8')
+        components.html(HtmlFile.read(), height=600)
+    except:
+        st.warning('no existen redes para la combinacion dada')
+        
 with col2:
     st.subheader('Métricas de red')
        
