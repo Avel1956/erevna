@@ -69,32 +69,32 @@ st.markdown('---')
 with st.expander("Ver los datos seleccionados"):
         df_ini= df_contract_filtered.copy()
         st.dataframe(df_ini)
-        red_metrics_df = red_metrics(df_ini, query)
-        try:
-
-            saved_nets= st.session_state['saved_nets']
-        except:
-            pass
-
-        if st.button('Guardar red'):
-            rdata= red_metrics_df.copy()
-            
-            
-            saved_nets= pd.concat([saved_nets, rdata])
-            st.session_state['saved_nets'] = saved_nets
-    
-
-        csv = convert_df(saved_nets)
-
-        st.download_button(
-        "Descargar",
-        csv,
-        "file.csv",
-        "text/csv",
-        key='download-csv'
-        )
+        
 G=nx.from_pandas_edgelist(df_contract_filtered, 'Source', 'Target')
+red_metrics_df = red_metrics(G, query)
+try:
 
+    saved_nets= st.session_state['saved_nets']
+except:
+    pass
+
+if st.button('Guardar red'):
+    rdata= red_metrics_df.copy()
+    
+    
+    saved_nets= pd.concat([saved_nets, rdata])
+    st.session_state['saved_nets'] = saved_nets
+
+
+csv = convert_df(saved_nets)
+
+st.download_button(
+"Descargar",
+csv,
+"file.csv",
+"text/csv",
+key='download-csv'
+)
 PG = Network(height='600px',
             width='100%',
             bgcolor='#020202',
