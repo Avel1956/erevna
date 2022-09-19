@@ -54,7 +54,7 @@ with st.expander("Ver todas las combinaciones posibles"):
 
 st.subheader("Red seleccionada") 
 
-df_sel= find_items(query, df)
+df_sel= find_items_prod(query, df)
 st.write(df_sel) 
 
 G=nx.from_pandas_edgelist(df_sel, 'source', 'target')
