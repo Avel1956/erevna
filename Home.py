@@ -48,9 +48,9 @@ with st.sidebar:
 
 st.header("Red de colaboracion en productos")
 
-with st.expander("Ver todas las combinaciones posibles"):
-    df_ini= df.copy()
-    st.write(df_ini)
+# with st.expander("Ver todas las combinaciones posibles"):
+#     df_ini= df.copy()
+#     st.write(df_ini)
 
 st.subheader("Red seleccionada") 
 
