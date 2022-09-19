@@ -75,13 +75,13 @@ G=nx.from_pandas_edgelist(df_contract_filtered, 'Source', 'Target')
 name = st.selectbox('Seleccione el nodo principal ',
     list(G.nodes()))
 color_net = sel_prop(G, name) 
-st.write('color_net')
-st.dataframe(color_net)
+
 nx.write_graphml_lxml(color_net, "output\\contractnet.graphml")
 name_target = st.selectbox(
     'Seleccione el nodo objetivo ',
     list(G.nodes()))
-
+st.write('color_net')
+st.dataframe(color_net)
 nx.write_graphml_lxml(color_net, "output\\net.graphml")
 dict_grado= dict(color_net.degree(color_net.nodes()))
 #aplicar atributo de grado a los nodos
