@@ -125,7 +125,7 @@ with col1:
     components.html(Htmlcontract.read(), height=600)
 with col2:
     st.subheader('Métricas de red')
-    st.dataframe(red_metrics_df)
+    st.write(red_metrics_df)
     
 
 
