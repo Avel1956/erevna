@@ -48,137 +48,139 @@ with st.sidebar:
 
 st.header("Red de colaboracion en productos")
 
-# with st.expander("Ver todas las combinaciones posibles"):
-#     df_ini= df.copy()
-#     st.write(df_ini)
+with st.expander("Ver todas las combinaciones posibles"):
+    df_ini= df.copy()
+    st.write(df_ini)
 
 st.subheader("Red seleccionada") 
 
 df_sel= find_items_prod(query, df)
-st.write(df_sel) 
+try:
+    st.write(df_sel) 
 
-G=nx.from_pandas_edgelist(df_sel, 'source', 'target')
+    G=nx.from_pandas_edgelist(df_sel, 'source', 'target')
 
-   #######seleccion de nodos
-    
-name = st.selectbox('Seleccione el nodo principal ',
-    list(G.nodes()))
-color_net = sel_prop(G, name) 
+    #######seleccion de nodos
+        
+    name = st.selectbox('Seleccione el nodo principal ',
+        list(G.nodes()))
+    color_net = sel_prop(G, name) 
 
-nx.write_graphml_lxml(color_net, "output\\net.graphml")
-#Creación de caja de selección del nodo 2 
+    nx.write_graphml_lxml(color_net, "output\\net.graphml")
+    #Creación de caja de selección del nodo 2 
 
-name_target = st.selectbox(
-    'Seleccione el nodo objetivo ',
-    list(G.nodes()))
-st.write('color_net')
-st.dataframe(color_net)
-nx.write_graphml_lxml(color_net, "output\\net.graphml")
+    name_target = st.selectbox(
+        'Seleccione el nodo objetivo ',
+        list(G.nodes()))
+    st.write('color_net')
+    st.dataframe(color_net)
+    nx.write_graphml_lxml(color_net, "output\\net.graphml")
+        # #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    # #Cálculo de métricas de la red
     # #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-# #Cálculo de métricas de la red
-# #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-# #Centralidad (degree)
-# #diccionario de los grados de cada nodo
-dict_grado= dict(color_net.degree(color_net.nodes()))
-#aplicar atributo de grado a los nodos
-nx.set_node_attributes(color_net, dict_grado, 'grado')
-# #Mostrar centralidad del nodo seleccionado
-med_cent = nx.betweenness_centrality(color_net)
-eig_cent = nx.eigenvector_centrality(color_net)
+    # #Centralidad (degree)
+    # #diccionario de los grados de cada nodo
+    dict_grado= dict(color_net.degree(color_net.nodes()))
+    #aplicar atributo de grado a los nodos
+    nx.set_node_attributes(color_net, dict_grado, 'grado')
+    # #Mostrar centralidad del nodo seleccionado
+    med_cent = nx.betweenness_centrality(color_net)
+    eig_cent = nx.eigenvector_centrality(color_net)
 
-    
-# #Asignacion como atributo de cada nodo
-nx.set_node_attributes(color_net, med_cent, 'betweenness')
-nx.set_node_attributes(color_net, eig_cent, 'eigenvector')
+        
+    # #Asignacion como atributo de cada nodo
+    nx.set_node_attributes(color_net, med_cent, 'betweenness')
+    nx.set_node_attributes(color_net, eig_cent, 'eigenvector')
 
-# #Diccionario de métricas de nodo seleccionado 
-node_metrics = {'Nodo': [name], 
-    'Grado': [color_net.nodes[name]['grado']],
-'Centralidad de mediacion':[color_net.nodes[name]['betweenness']],
-'Centralidad de eigenvector': [color_net.nodes[name]['eigenvector']]
-}
-# #Dataframe a partir del diccionario de métricas para representación  
-node_metrics_df = pd.DataFrame(data = node_metrics)
-# #--------------------------------
-# #Camino más corto entre nodos (shortest path) 
-try:
-    camino_mas_corto = nx.shortest_path(color_net, source = name, target = name_target)
-except:
-    camino_mas_corto = "No existe un camino entre los nodos seleccionados"
-
-# #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-# #Estadísticas de red 
-
-# #Dataframe de métricas de la red para representación  
-red_metrics_df = red_metrics(color_net, query)
-
-#######
-###Guardar metricas con un nombre específico
-#######
-
-try:
-
-    saved_nets= st.session_state['saved_nets']
-except:
-    pass
-
-if st.button('Guardar red'):
-    rdata= red_metrics_df.copy()
-    
-    
-    saved_nets= pd.concat([saved_nets, rdata])
-    st.session_state['saved_nets'] = saved_nets
-    
-
-csv = convert_df(saved_nets)
-
-st.download_button(
-   "Descargar",
-   csv,
-   "file.csv",
-   "text/csv",
-   key='download-csv'
-)
-
-######inicializar objeto pyvis
-PG = Network(height='600px',
-            width='100%',
-            bgcolor='#020202',
-                    
-            font_color='white'
-            ) 
-PG.from_nx(G)
-PG.repulsion(node_distance=420,
-                    central_gravity=0.33,
-                    spring_length=110,
-                    spring_strength=0.10,
-                    damping=0.95
-                    )
-
-
-# guardar y leer el grafico como HTML (Streamlit Sharing)
-PG.save_graph('output\\PG.html')
-HtmlFile = open('output\\PG.html', 'r', encoding='utf-8')
-st.write(G)
-
-col1, col2= st.columns([3,1])
-
-with col1:
-    st.subheader('Red seleccionada')
+    # #Diccionario de métricas de nodo seleccionado 
+    node_metrics = {'Nodo': [name], 
+        'Grado': [color_net.nodes[name]['grado']],
+    'Centralidad de mediacion':[color_net.nodes[name]['betweenness']],
+    'Centralidad de eigenvector': [color_net.nodes[name]['eigenvector']]
+    }
+    # #Dataframe a partir del diccionario de métricas para representación  
+    node_metrics_df = pd.DataFrame(data = node_metrics)
+    # #--------------------------------
+    # #Camino más corto entre nodos (shortest path) 
     try:
-        
-        Htmlprod = open('output\\PG.html', 'r', encoding='utf-8')
-        components.html(HtmlFile.read(), height=600)
+        camino_mas_corto = nx.shortest_path(color_net, source = name, target = name_target)
     except:
-        st.warning('no existen redes para la combinacion dada')
+        camino_mas_corto = "No existe un camino entre los nodos seleccionados"
+
+    # #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    # #Estadísticas de red 
+
+    # #Dataframe de métricas de la red para representación  
+    red_metrics_df = red_metrics(color_net, query)
+
+    #######
+    ###Guardar metricas con un nombre específico
+    #######
+
+    try:
+
+        saved_nets= st.session_state['saved_nets']
+    except:
+        pass
+
+    if st.button('Guardar red'):
+        rdata= red_metrics_df.copy()
         
-with col2:
-    st.subheader('Métricas de red')
-       
-    st.dataframe(red_metrics_df)
-  
-    st.subheader('Métricas del nodo seleccionado')
-    st.dataframe(node_metrics_df)
+        
+        saved_nets= pd.concat([saved_nets, rdata])
+        st.session_state['saved_nets'] = saved_nets
+        
+
+    csv = convert_df(saved_nets)
+
+    st.download_button(
+    "Descargar",
+    csv,
+    "file.csv",
+    "text/csv",
+    key='download-csv'
+    )
+
+    ######inicializar objeto pyvis
+    PG = Network(height='600px',
+                width='100%',
+                bgcolor='#020202',
+                        
+                font_color='white'
+                ) 
+    PG.from_nx(G)
+    PG.repulsion(node_distance=420,
+                        central_gravity=0.33,
+                        spring_length=110,
+                        spring_strength=0.10,
+                        damping=0.95
+                        )
 
 
+    # guardar y leer el grafico como HTML (Streamlit Sharing)
+    PG.save_graph('output\\PG.html')
+    HtmlFile = open('output\\PG.html', 'r', encoding='utf-8')
+    st.write(G)
+
+    col1, col2= st.columns([3,1])
+
+    with col1:
+        st.subheader('Red seleccionada')
+        try:
+            
+            Htmlprod = open('output\\PG.html', 'r', encoding='utf-8')
+            components.html(HtmlFile.read(), height=600)
+        except:
+            st.warning('no existen redes para la combinacion dada')
+            
+    with col2:
+        st.subheader('Métricas de red')
+        
+        st.dataframe(red_metrics_df)
+    
+        st.subheader('Métricas del nodo seleccionado')
+        st.dataframe(node_metrics_df)
+
+except:
+    st.warning('no existen redes para la combinacion dada')
  
