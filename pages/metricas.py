@@ -42,7 +42,7 @@ except:
 
 
 
-df_arranged= df_prods.copy()
+
 
 # fig = plt.figure(figsize=(10, 4))
 # sns.barplot( data = df_prods, x = "index", y = "densidad" )
