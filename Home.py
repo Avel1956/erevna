@@ -50,7 +50,7 @@ st.header("Red de colaboracion en productos")
 
 with st.expander("Ver todas las combinaciones posibles"):
     df_ini= df.copy()
-    st.dataframe(df_ini)
+    st.write(df_ini)
 
 st.subheader("Red seleccionada") 
 
