@@ -62,70 +62,8 @@ with st.sidebar:
     st.write('Usted seleccionó: ', query)
 
 
-def find_items(opciones, df):
-    
-    
-    st.write(opciones)
-    #st.write(df['combination'])
-    
-    df_final_per= pd.DataFrame()
-    df_final_net= pd.DataFrame()
-    df_final_vinc= pd.DataFrame()
-    df_final_form= pd.DataFrame()
-    df_final_gen= pd.DataFrame()
-    border_list= [] 
 
-    for item in opciones[0]:#Semestre
-        if item== 'todos':
-            df_final_per= df
-        else:
-            df_per= df.loc[df['Semestre']== item]
-            df_final_per= pd.concat([df_final_per, df_per])
-        
-    #tipo de red
-    df_final_net= df_final_per.copy()
-    
-        
-    if opciones[1]== 'personas-instituciones':
-        df_final_net.rename(columns = {'Nombre':'Source', 'Entidad':'Target'}, inplace = True)
-    
-    if opciones[1]== 'personas-proyectos':
-        df_final_net.rename(columns = {'Nombre':'Source', 'Proyecto':'Target'}, inplace = True)
-    
-            
-    for item in opciones[2]:#vinculacion
-        if item== 'todos':
-            df_final_vinc= df_final_net.copy()
-           
-        else:
-            df_vinc= df_final_net.loc[df_final_net['Rol']== item]
-            df_final_vinc= pd.concat([df_final_net, df_vinc])
-    
-    
-    for item in opciones[3]:#formacion
-        if item== 'todos':
-            df_final_form= df_final_vinc.copy()
-        
-        else:
-            df_form= df_final_vinc.loc[df_final_vinc['Formación']== item]
-            df_final_form= pd.concat([df_final_form, df_form])
-    
-    
-    for item in opciones[4]:#genero
-        if item== 'todos':
-            df_final_gen= df_final_form.copy()
-        else:
-            df_gen= df_final_form.loc[df_final_form['Género']== item]
-            df_final_gen= pd.concat([df_final_gen, df_gen])
-        
-           
-      
-    
-    
-
-    
-    return df_final_gen
-df_contract_filtered= find_items(query, df_contract)
+df_contract_filtered= find_items_contr(query, df_contract)
 st.header("Redes contractuales")
 st.markdown('---')
 with st.expander("Ver los datos seleccionados"):
