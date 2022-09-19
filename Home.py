@@ -70,7 +70,7 @@ nx.write_graphml_lxml(color_net, "output\\net.graphml")
 name_target = st.selectbox(
     'Seleccione el nodo objetivo ',
     list(G.nodes()))
-color_net = sel_prop(G, name) 
+
 nx.write_graphml_lxml(color_net, "output\\net.graphml")
     # #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 # #Cálculo de métricas de la red
@@ -167,8 +167,7 @@ with col1:
     components.html(HtmlFile.read(), height=600)
 with col2:
     st.subheader('Métricas de red')
-    
-    
+       
     st.dataframe(red_metrics_df)
   
     st.subheader('Métricas del nodo seleccionado')

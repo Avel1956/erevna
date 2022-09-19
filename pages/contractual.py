@@ -79,7 +79,7 @@ nx.write_graphml_lxml(color_net, "output\\contractnet.graphml")
 name_target = st.selectbox(
     'Seleccione el nodo objetivo ',
     list(G.nodes()))
-color_net = sel_prop(G, name) 
+
 nx.write_graphml_lxml(color_net, "output\\net.graphml")
 dict_grado= dict(color_net.degree(color_net.nodes()))
 #aplicar atributo de grado a los nodos
@@ -162,7 +162,7 @@ with col1:
 with col2:
     st.subheader('Métricas de red')
 
-    st.dataframe(red_metrics_df)
+    #st.dataframe(red_metrics_df)
     st.subheader('Métricas del nodo seleccionado')
     st.dataframe(node_metrics_df)
     
