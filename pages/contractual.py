@@ -105,10 +105,7 @@ try:
     camino_mas_corto = nx.shortest_path(color_net, source = name, target = name_target)
 except:
     camino_mas_corto = "No existe un camino entre los nodos seleccionados"
-name_target = st.selectbox(
-    'Seleccione el nodo destino',
-    list(G.nodes()))
-color_net = sel_prop(G, name) 
+
 
 red_metrics_df = red_metrics(color_net, query)
 try:
