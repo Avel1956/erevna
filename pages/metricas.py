@@ -6,7 +6,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib as plt
 import numpy as np
-
+from funciones import *
 try:
     df_prods= st.session_state['saved_nets']
     df_prods['index']= np.arange(1, df_prods.shape[0] + 1)
@@ -14,6 +14,17 @@ try:
     st.write(df_prods.index)
     st.header('Analisis de la red seleccionada')
     st.dataframe(df_prods)
+    if st.button('Limpiar'):
+        st.session_state['saved_nets']= pd.DataFrame()
+    csv = convert_df(df_prods)
+
+    st.download_button(
+    "Descargar",
+    csv,
+    "file.csv",
+    "text/csv",
+    key='download-csv'
+    )
 except:
     st.warning('Seleccione al menos una red de productos o contractual')
     
