@@ -27,12 +27,4 @@ csv,
 key='download-csv'
 )
 
-fig, ax= plt.subplots()
-sns.barplot(
-    data=df_prods, 
-    x= 'index', 
-    y= 'densidad', 
-    ax= ax
-    )
-
-st.pyplot(fig)
+st.bar_chart(df_prods)
