@@ -108,7 +108,7 @@ except:
 # #Estadísticas de red 
 
 # #Dataframe de métricas de la red para representación  
-red_metrics_df = red_metrics(color_net)
+red_metrics_df = red_metrics(color_net, query)
 
 #######
 ###Guardar metricas con un nombre específico
