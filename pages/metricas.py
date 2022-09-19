@@ -27,4 +27,4 @@ csv,
 key='download-csv'
 )
 
-st.bar_chart(df_prods)
+st.bar_chart(df_prods, y='densidad')
