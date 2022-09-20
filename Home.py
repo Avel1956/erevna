@@ -180,6 +180,8 @@ try:
     
         st.subheader('Métricas del nodo seleccionado')
         st.dataframe(node_metrics_df)
+        st.subheader('Métricas guardadas')
+        st.dataframe(saved_nets)
 
 except:
     st.warning('no existen redes para la combinacion dada')
