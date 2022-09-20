@@ -27,7 +27,7 @@ csv,
 key='download-csv'
 )
 fig = plt.figure.Figure(figsize=(10, 4))
-sns.countplot(x="num_nodos", data=df_prods)
+sns.barplot(data=df_prods, x="index", y= 'num_nodes', hue= 'densidad' )
 st.pyplot(fig)
 
 
