@@ -27,7 +27,7 @@ csv,
 key='download-csv'
 )
 fig = plt.figure.Figure(figsize=(10, 4))
-sns.barplot(data=df_prods, x="index", y= 'num_nodes' )
+sns.barplot(data=df_prods, x="index", y= 'num_nodos', hue= 'Cuantas subredes' )
 st.pyplot(fig)
 
 
