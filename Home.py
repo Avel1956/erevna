@@ -72,7 +72,7 @@ try:
     name_target = st.selectbox(
         'Seleccione el nodo objetivo ',
         list(G.nodes()))
-    st.write('color_net')
+    
     st.dataframe(color_net)
     nx.write_graphml_lxml(color_net, "output\\net.graphml")
         # #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -160,7 +160,7 @@ try:
     # guardar y leer el grafico como HTML (Streamlit Sharing)
     PG.save_graph('output\\PG.html')
     HtmlFile = open('output\\PG.html', 'r', encoding='utf-8')
-    st.write(G)
+    
 
     col1, col2= st.columns([3,1])
 
