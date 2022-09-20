@@ -165,7 +165,7 @@ try:
     col1, col2= st.columns([3,1])
 
     with col1:
-        st.subheader('Red seleccionada')
+        st.subheader('Grafo de la red')
         try:
             
             Htmlprod = open('output\\PG.html', 'r', encoding='utf-8')

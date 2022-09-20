@@ -167,8 +167,8 @@ with col2:
 
     st.write(red_metrics_df)
     st.subheader('Métricas del nodo seleccionado')
-    for item in red_metrics_df:
-        st.write(item)
+    st.subheader('Métricas guardadas')
+    st.dataframe(saved_nets)
    
     
 
