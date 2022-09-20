@@ -21,8 +21,8 @@ with st.sidebar:
     ['todos','2019-1', '2020-2', '2021-1', '2021-2'], default= '2019-1')
     
     #[1]
-    tipo_red= st.selectbox('Tipo(s) de red',['personas-instituciones', 
-    'personas-proyectos'])
+    tipo_red=list(st.selectbox('Tipo(s) de red',('personas-instituciones', 
+    'personas-proyectos')) )
     #[2]
     tipo_vinculacion= st.multiselect('Tipo de vinculación',
      ['Acompañamiento conceptual y metodológico',
