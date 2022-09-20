@@ -13,7 +13,7 @@ df_prods= st.session_state['saved_nets']
 df_prods['index']= np.arange(1, df_prods.shape[0] + 1)
 df_prods.index = df_prods['index']
 st.write(df_prods.index)
-st.header('Analisis de la red seleccionada')
+st.header('Analisis de las redes seleccionadas')
 st.dataframe(df_prods)
 if st.button('Limpiar'):
     st.session_state['saved_nets']= pd.DataFrame()
@@ -27,7 +27,7 @@ csv,
 key='download-csv'
 )
 fig = plt.figure.Figure(figsize=(10, 4))
-sns.barplot(data=df_prods, x="index", y= 'num_nodos', hue= 'Cuantas subredes' )
+sns.catplot(data=df_prods, x="index", y= 'num_nodos', hue= 'Cuantas subredes' )
 st.pyplot(fig)
 
 
