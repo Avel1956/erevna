@@ -26,7 +26,7 @@ csv,
 "text/csv",
 key='download-csv'
 )
-fig = plt.figure(figsize=(10, 4))
+fig = plt.figure.Figure(figsize=(10, 4))
 sns.countplot(x="num_nodos", data=df_prods)
 st.pyplot(fig)
 
