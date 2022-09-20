@@ -73,7 +73,7 @@ try:
         'Seleccione el nodo objetivo ',
         list(G.nodes()))
     
-    st.dataframe(color_net)
+    
     nx.write_graphml_lxml(color_net, "output\\net.graphml")
         # #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     # #Cálculo de métricas de la red
