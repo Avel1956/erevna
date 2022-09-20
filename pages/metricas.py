@@ -26,6 +26,10 @@ csv,
 "text/csv",
 key='download-csv'
 )
+fig = plt.figure(figsize=(10, 4))
+sns.countplot(x="num_nodos", data=df_prods)
+st.pyplot(fig)
+
 
 st.bar_chart(df_prods,
 x='index',
