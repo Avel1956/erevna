@@ -84,10 +84,10 @@ def find_items_contr(opciones, df):
     df_final_net= df_final_per.copy()
     
         
-    if opciones[1]== 'personas-instituciones':
+    if opciones[1]== ['personas-instituciones']:
         df_final_net.rename(columns = {'Nombre':'Source', 'Entidad':'Target'}, inplace = True)
     
-    if opciones[1]== 'personas-proyectos':
+    if opciones[1]== ['personas-proyectos']:
         df_final_net.rename(columns = {'Nombre':'Source', 'Proyecto':'Target'}, inplace = True)
     
             
