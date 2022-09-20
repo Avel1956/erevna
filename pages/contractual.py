@@ -152,7 +152,7 @@ PG.repulsion(node_distance=420,
 # guardar y leer el grafico como HTML (Streamlit Sharing)
 PG.save_graph('output\\contractual.html')
 
-st.write(G)
+
 
 
 
