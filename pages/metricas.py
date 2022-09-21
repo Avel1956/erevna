@@ -5,7 +5,7 @@ import streamlit as st
 #from st_aggrid import AgGrid
 import pandas as pd
 import seaborn as sns
-import matplotlib as plt
+import matplotlib.pyplot as plt
 import numpy as np
 from funciones import *
 
