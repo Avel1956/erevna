@@ -26,7 +26,7 @@ csv,
 "text/csv",
 key='download-csv'
 )
-fig = plt.figure.Figure(figsize=(10, 4))
+fig = plt.figure(figsize=(10, 4))
 sns.catplot(data=df_prods, x="index", y= 'num_nodos' )
 st.pyplot(fig)
 
