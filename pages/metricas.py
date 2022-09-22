@@ -18,7 +18,7 @@ df= st.session_state['saved_nets']
 with st.sidebar:
     st.header('Herramienta de análisis y representación de datos')
     st.subheader('Subir archivo excel')
-    
+    st.button('Subir XLSX')
     st.subheader('Selección de datos')
     Selec_A= st.selectbox(
         'Seleccione la columna principal',
