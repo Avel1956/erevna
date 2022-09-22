@@ -19,7 +19,7 @@ with st.sidebar:
     st.header('Herramienta de análisis y representación de datos')
     st.subheader('Subir archivo excel')
     uploaded_file = st.file_uploader('xlsx')             
-    df=pd.read_excel(uploaded_file)
+    df=pd.read_excel(uploaded_file, 'Productos')
     
     st.subheader('Selección de datos')
     Selec_A= st.selectbox(
