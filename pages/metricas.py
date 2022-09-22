@@ -9,28 +9,35 @@ import matplotlib.pyplot as plt
 import numpy as np
 from funciones import *
 
-df_prods= st.session_state['saved_nets']
-df_prods['index']= np.arange(1, df_prods.shape[0] + 1)
-df_prods.index = df_prods['index']
-st.write(df_prods.index)
-st.header('Analisis de las redes seleccionadas')
-st.dataframe(df_prods)
-if st.button('Limpiar'):
-    st.session_state['saved_nets']= pd.DataFrame()
-csv = convert_df(df_prods)
+df= st.session_state['saved_nets']
 
-st.download_button(
-"Descargar",
-csv,
-"file.csv",
-"text/csv",
-key='download-csv'
-)
-fig = plt.figure(figsize=(10, 4))
-sns.catplot(data=df_prods, x="index", y= 'num_nodos' )
+
+
+
+
+with st.sidebar:
+    st.header('Herramienta de análisis y representación de datos')
+    st.subheader('Subir archivo excel')
+    
+    st.subheader('Selección de datos')
+    Selec_A= st.selectbox(
+        'Seleccione la columna principal',
+        list(df.columns),
+        key= 'col_y'
+        )
+    Selec_B= st.selectbox(
+        'Seleccione la columna secundaria',
+        df.columns, 
+        key= 'col_x'
+        )
+
+with st.expander("Ver dataframe en memoria"):
+    if df.empty==True:
+        st.warning('Importe una tabla de otra página o suba un arhivo de excel.')
+    df_ini= df.copy()
+    st.write(df_ini)
+fig= bar_plot(df, Selec_A)
 st.pyplot(fig)
 
-
-st.bar_chart(df_prods,
-x='index',
-y='densidad')
+if st.button('Subir XLSX'):
+    df= upload_xlsx()

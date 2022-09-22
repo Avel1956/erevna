@@ -1,7 +1,24 @@
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 import streamlit as st
 import networkx as nx
 from networkx.algorithms.community import greedy_modularity_communities
+
+
+
+####funciones de tronsformacion de datos
+#####
+#abre menu de subida de orchivos para subir un xslx y devuelve un dataframe
+##
+def upload_xlsx():
+    uploaded_file = st.file_uploader('Choose a file')             
+    df1=pd.read_excel(uploaded_file)
+    return df1
+
+
+#funcion de filtrado productos
+##
 def find_items_prod(opciones, df):
     
     
@@ -60,6 +77,8 @@ def find_items_prod(opciones, df):
     filtered_df= pd.DataFrame(border_list, columns=['source', 'target'])
     return filtered_df
 
+#funcion de filtrado de personal
+##
 def find_items_contr(opciones, df):
     
     
@@ -115,14 +134,16 @@ def find_items_contr(opciones, df):
         else:
             df_gen= df_final_form.loc[df_final_form['Género']== item]
             df_final_gen= pd.concat([df_final_gen, df_gen])
-        
-           
-      
-    
-    
-
     
     return df_final_gen
+#convertir dataframe en csv
+##
+def convert_df(df):
+   return df.to_csv().encode('utf-8')
+###funciones de manipulacion de redes
+####
+#cambiar el color de la red y resaltar un nodo especifico
+##
 def sel_prop(net, name):
     #vector inicial seleccion
     nx.set_edge_attributes(net, '#8E9F7D', "color"  )
@@ -135,9 +156,9 @@ def sel_prop(net, name):
     net.nodes[name]["color"] = '#B2F227'
     return net
 
-def convert_df(df):
-   return df.to_csv().encode('utf-8')
 
+#metricas de la red
+##
 def red_metrics(G, query):
     num_nodes= G.number_of_nodes()
     num_bordes= G.number_of_edges()
@@ -157,3 +178,27 @@ def red_metrics(G, query):
     'Cuantas subredes': [no_componentes]} 
     red_metrics_df = pd.DataFrame(data = red_metrics)
     return red_metrics_df
+
+###funciones de generacion de graficos
+####
+
+#para un dataframe dado, figura de un grafico de barras con los conteos de ocurrencias
+#de los elementos unicos de la columna x del dataframe
+##
+def bar_plot(df, x):
+    custom_style = {'axes.labelcolor': 'gray',
+                'grid.color': 'None',
+                'axes.edgecolor': 'gray',
+                'axes.facecolor': 'None',
+                'grid.color': 'gray',
+                'xtick.color': 'gray',
+                'ytick.color': 'grey'}
+    sns.set_style("dark", rc=custom_style)
+    
+    fig = plt.figure(figsize=(10, 4))
+    
+    fig.patch.set_facecolor('None')
+    ax= sns.countplot(x= x, data= df, order = df[x].value_counts().index )
+    ax.set_xticklabels(ax.get_xticklabels(), rotation=40, ha="right")
+    #fig.legend(loc='upper right')
+    return fig
