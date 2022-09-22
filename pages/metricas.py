@@ -18,8 +18,8 @@ df= st.session_state['saved_nets']
 with st.sidebar:
     st.header('Herramienta de análisis y representación de datos')
     st.subheader('Subir archivo excel')
-    if st.button('Subir XLSX'):
-        df= upload_xlsx()
+    uploaded_file = st.file_uploader('xlsx')             
+    df=pd.read_excel(uploaded_file)
     
     st.subheader('Selección de datos')
     Selec_A= st.selectbox(

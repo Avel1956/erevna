@@ -9,14 +9,6 @@ from networkx.algorithms.community import greedy_modularity_communities
 
 ####funciones de tronsformacion de datos
 #####
-#abre menu de subida de orchivos para subir un xslx y devuelve un dataframe
-##
-def upload_xlsx():
-    uploaded_file = st.file_uploader('Choose a file')             
-    df1=pd.read_excel(uploaded_file)
-    return df1
-
-
 #funcion de filtrado productos
 ##
 def find_items_prod(opciones, df):
