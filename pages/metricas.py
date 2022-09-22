@@ -18,7 +18,9 @@ df= st.session_state['saved_nets']
 with st.sidebar:
     st.header('Herramienta de análisis y representación de datos')
     st.subheader('Subir archivo excel')
-    st.button('Subir XLSX')
+    if st.button('Subir XLSX'):
+        df= upload_xlsx()
+    
     st.subheader('Selección de datos')
     Selec_A= st.selectbox(
         'Seleccione la columna principal',
@@ -39,5 +41,3 @@ with st.expander("Ver dataframe en memoria"):
 fig= bar_plot(df, Selec_A)
 st.pyplot(fig)
 
-if st.button('Subir XLSX'):
-    df= upload_xlsx()
