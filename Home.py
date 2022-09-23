@@ -128,7 +128,7 @@ try:
         
         
         saved_nets= pd.concat([saved_nets, rdata])
-        st.session_state['saved_nets'] = saved_nets
+        st.session_state['saved_prod'] = saved_nets
         
 
     csv = convert_df(saved_nets)
