@@ -11,8 +11,8 @@ from funciones import *
 
 
 
-df_prod= st.session_state('saved_prod')
-df_contr= st.session_state('saved_contractual')
+df_prod= st.session_state['saved_prod']
+df_contr= st.session_state['saved_contractual']
 
 
 
