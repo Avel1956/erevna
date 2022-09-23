@@ -59,18 +59,18 @@ with st.sidebar:
 
 
 
-    else:
-        st.warning('you need to upload a csv or excel file.')
-        Selec_A= st.selectbox(
-                'Seleccione la columna principal',
-                list(df.columns),
-                key= 'col_y'
-                )
-        Selec_B= st.selectbox(
-                'Seleccione la columna secundaria',
-                df.columns, 
-                key= 'col_x'
-                )
+ 
+        
+    Selec_A= st.selectbox(
+            'Seleccione la columna principal',
+            list(df.columns),
+            key= 'col_y'
+            )
+    Selec_B= st.selectbox(
+            'Seleccione la columna secundaria',
+            df.columns, 
+            key= 'col_x'
+            )
 st.write(df)
 with st.expander("Ver dataframe en memoria"):
     if df.empty==True:
