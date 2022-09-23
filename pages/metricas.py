@@ -33,12 +33,14 @@ with st.sidebar:
             df= df_prod
         else:
             st.warning('No hay redes de productos en memoria')
+            pass
     if data== 'Contractual':
         if df_contr is not None:
 
             df= df_contr
         else:
             st.warning('No hay redes contractuales en memoria')
+            pass
     if data== 'Externo':
         uploaded_file = st.file_uploader('csv\excel')
         if uploaded_file is not None:
@@ -48,11 +50,12 @@ with st.sidebar:
 
             #read xls or xlsx
             except: 
+                try:
+                    df=pd.read_excel(uploaded_file)
                
-                df=pd.read_excel(uploaded_file)
-            
-            # except:
-            #     st.warning('tipo de archivo no reconocido')
+                except:
+                    st.warning('tipo de archivo no reconocido')
+                    pass
 
 
 
