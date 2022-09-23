@@ -27,13 +27,13 @@ with st.sidebar:
     ('Produccion', 'Contractual', 'Externo'))
 
     if data == 'Produccion':
-        if st.session_state('saved_prod'):
+        if st.session_state('saved_prod') is not None:
 
             df= st.session_state('saved_prod')
         else:
             st.warning('No hay redes de productos en memoria')
     if data== 'Contractual':
-        if st.session_state('saved_contractual'):
+        if st.session_state('saved_contractual') is not None:
 
             df= st.session_state('saved_contractual')
         else:
