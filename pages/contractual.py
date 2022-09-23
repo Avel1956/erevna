@@ -122,7 +122,7 @@ if st.button('Guardar red'):
     
     
     saved_nets= pd.concat([saved_nets, rdata])
-    st.session_state['saved_nets'] = saved_nets
+    st.session_state['saved_contractual'] = saved_nets
 
 
 csv = convert_df(saved_nets)
