@@ -11,7 +11,8 @@ from funciones import *
 
 
 
-
+df_prod= st.session_state('saved_prod')
+df_contr= st.session_state('saved_contractual')
 
 
 
@@ -27,15 +28,15 @@ with st.sidebar:
     ('Produccion', 'Contractual', 'Externo'))
 
     if data == 'Produccion':
-        if st.session_state('saved_prod') is not None:
+        if df_prod is not None:
 
-            df= st.session_state('saved_prod')
+            df= df_prod
         else:
             st.warning('No hay redes de productos en memoria')
     if data== 'Contractual':
-        if st.session_state('saved_contractual') is not None:
+        if df_contr is not None:
 
-            df= st.session_state('saved_contractual')
+            df= df_contr
         else:
             st.warning('No hay redes contractuales en memoria')
     if data== 'Externo':
