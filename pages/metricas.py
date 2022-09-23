@@ -10,7 +10,7 @@ import numpy as np
 from funciones import *
 
 
-
+df= pd.DataFrame()
 df_prod= st.session_state['saved_prod']
 df_contr= st.session_state['saved_contractual']
 
@@ -55,13 +55,14 @@ with st.sidebar:
                
                 except:
                     st.warning('tipo de archivo no reconocido')
-                    pass
+                    
 
 
 
  
         
     Selec_A= st.selectbox(
+            
             'Seleccione la columna principal',
             list(df.columns),
             key= 'col_y'
