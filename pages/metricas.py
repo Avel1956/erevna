@@ -77,6 +77,11 @@ with st.expander("Ver dataframe en memoria"):
         st.warning('Importe una tabla de otra página o suba un arhivo de excel.')
     df_ini= df.copy()
     st.write(df_ini)
-fig= bar_plot(df, Selec_A)
-st.pyplot(fig)
+try:
+
+    fig= bar_plot(df, Selec_A)
+    st.pyplot(fig)
+
+except:
+    st.warning('La (o las) columnas seleccionadas no son adecuadas para este tipo de gráfico')
 
