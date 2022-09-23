@@ -113,7 +113,7 @@ except:
 red_metrics_df = red_metrics(color_net, query)
 try:
 
-    saved_nets= st.session_state['saved_nets']
+    saved_nets= st.session_state['saved_contractual']
 except:
     pass
 
