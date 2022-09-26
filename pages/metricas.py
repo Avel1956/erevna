@@ -24,7 +24,7 @@ with st.sidebar:
     
     st.subheader('Selección de datos')
     data= st.radio(
-    "What's your favorite movie genre",
+    "Origen de los datos",
     ('Produccion', 'Contractual', 'Externo'))
 
     if data == 'Produccion':
