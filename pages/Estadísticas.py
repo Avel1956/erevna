@@ -82,7 +82,7 @@ with st.sidebar:
             key= 'col_x'
             )
 
-df_str= df.copy().to_string()
+df_str= df.copy()
 
 st.write(df_str)
 with st.expander("Ver dataframe en memoria"):
