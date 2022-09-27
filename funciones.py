@@ -138,14 +138,14 @@ def convert_df(df):
 ##
 def sel_prop(net, name):
     #vector inicial seleccion
-    nx.set_edge_attributes(net, '#8E9F7D', "color"  )
+    nx.set_edge_attributes(net, '#f2542d', "color"  )
     nx.set_node_attributes(net, 0, "sel")
      #vector inicial de colores
-    nx.set_node_attributes(net, 'white', "color")
+    nx.set_node_attributes(net, '#f5dfbb', "color")
      #Aplicacion del valor de seleccion al nodo seleccionado
     net.nodes[name]["sel"] = 1
      #Aplicacion de color al nodo (y los bordes conectados a este)
-    net.nodes[name]["color"] = '#B2F227'
+    net.nodes[name]["color"] = '#0e9594'
     return net
 
 
