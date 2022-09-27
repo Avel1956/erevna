@@ -88,7 +88,7 @@ with st.expander("Ver dataframe en memoria"):
     df_ini= df.copy()
     st.write(df_ini)
 
-st.write('test'+ Selec_A)
+st.write('test'+ str(Selec_A))
 try:
 
     fig= bar_plot(df, Selec_A)
