@@ -11,8 +11,12 @@ from funciones import *
 
 
 df= pd.DataFrame()
-df_prod= st.session_state['saved_prod']
-df_contr= st.session_state['saved_contractual']
+try:
+    df_prod= st.session_state['saved_prod']
+
+    df_contr= st.session_state['saved_contractual']
+except:
+    pass
 
 
 
