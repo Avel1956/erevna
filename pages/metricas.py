@@ -31,17 +31,19 @@ with st.sidebar:
     ('Externo','Produccion', 'Contractual'))
 
     if data == 'Produccion':
-        if df_prod is not None:
+        try:
+            if df_prod is not None:
 
-            df= df_prod
-        else:
+                df= df_prod
+        except:
             st.warning('No hay redes de productos en memoria')
             pass
     if data== 'Contractual':
-        if df_contr is not None:
+        try:
+            if df_contr is not None:
 
-            df= df_contr
-        else:
+                df= df_contr
+        except:
             st.warning('No hay redes contractuales en memoria')
             pass
     if data== 'Externo':
