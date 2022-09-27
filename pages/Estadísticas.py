@@ -88,7 +88,13 @@ with st.expander("Ver dataframe en memoria"):
     df_ini= df.copy()
     st.write(df_ini)
 
-st.write('test'+ str(Selec_A))
+res_prods = df["subproductos"].value_counts()
+n_rows = len(df)
+
+md_results = f"Hasta la fecha la Alianza ha generado **{n_rows:.2f}** nuevos productos:"
+
+st.markdown(md_results)
+st.table(res_prods)
 try:
 
     fig= bar_plot(df, Selec_A)
