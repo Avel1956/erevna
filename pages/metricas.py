@@ -12,9 +12,15 @@ from funciones import *
 
 df= pd.DataFrame()
 
-df_prod= st.session_state['saved_prod']
+try:
+    df_prod= st.session_state['saved_prod']
+except:
+    df_prod= pd.DataFrame()
 
-df_contr= st.session_state['saved_contractual']
+try:
+    df_contr= st.session_state['saved_contractual']
+except:
+    df_contr= pd.DataFrame()
 
 
 
@@ -31,19 +37,17 @@ with st.sidebar:
     ('Externo','Produccion', 'Contractual'))
 
     if data == 'Produccion':
-        try:
-            if df_prod is not None:
+        if df_prod is not None:
 
-                df= df_prod
-        except:
+            df= df_prod
+        else:
             st.warning('No hay redes de productos en memoria')
             pass
     if data== 'Contractual':
-        try:
-            if df_contr is not None:
+        if df_contr is not None:
 
-                df= df_contr
-        except:
+            df= df_contr
+        else:
             st.warning('No hay redes contractuales en memoria')
             pass
     if data== 'Externo':
