@@ -81,7 +81,10 @@ with st.sidebar:
             df.columns, 
             key= 'col_x'
             )
-st.write(df)
+
+df_str= df.copy().to_string()
+
+st.write(df_str)
 with st.expander("Ver dataframe en memoria"):
     if df.empty==True:
         st.warning('Importe una tabla de otra página o suba un arhivo de excel.')
