@@ -25,7 +25,7 @@ with st.sidebar:
     st.subheader('Selección de datos')
     data= st.radio(
     "Origen de los datos",
-    ('Produccion', 'Contractual', 'Externo'))
+    ('Externo','Produccion', 'Contractual'))
 
     if data == 'Produccion':
         if df_prod is not None:
