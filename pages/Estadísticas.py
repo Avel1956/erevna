@@ -1,5 +1,8 @@
 from asyncore import write
 from operator import index
+import profile
+from turtle import title
+from pandas_profiling.config import Variables
 import streamlit as st
 
 #from st_aggrid import AgGrid
@@ -9,7 +12,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 from funciones import *
 from gsheetsdb import connect
+import pandas_profiling
+from streamlit_pandas_profiling import st_profile_report
 
+from pandas_profiling import ProfileReport
 
 # Create a connection object.
 conn = connect()
@@ -123,3 +129,15 @@ try:
 except:
     st.warning('La (o las) columnas seleccionadas no son adecuadas para este tipo de gráfico')
 
+profile= ProfileReport(df,
+
+            title= "Producción SÉNECA",
+            dataset= {
+                "descripcion": "Este perfil fue generado para uso interno"
+            },
+            variables= {
+
+            }
+            )
+
+st_profile_report(profile)
