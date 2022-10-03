@@ -2,7 +2,7 @@ from asyncore import write
 from operator import index
 import profile
 
-from pandas_profiling.config import Variables
+
 import streamlit as st
 
 #from st_aggrid import AgGrid
