@@ -8,9 +8,26 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 from funciones import *
+from gsheetsdb import connect
 
 
+# Create a connection object.
+conn = connect()
+
+# Perform SQL query on the Google Sheet.
+# Uses st.cache to only rerun when the query changes or after 10 min.
+@st.cache(ttl=600)
+def run_query(query):
+    rows = conn.execute(query, headers=1)
+    rows = rows.fetchall()
+    return rows
+
+sheet_url = st.secrets["gsheet"]
+rows = run_query(f'SELECT * FROM "{sheet_url}"')
+
+st.write(rows)
 df= pd.DataFrame()
+
 
 try:
     df_prod= pd.read_pickle('output/master_df.pkl')
