@@ -28,7 +28,7 @@ url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sh
 df = pd.read_csv(url)
 
 st.write(df)
-df= pd.DataFrame()
+
 
 
 try:
@@ -71,18 +71,18 @@ with st.sidebar:
             pass
     if data== 'Externo':
         uploaded_file = st.file_uploader('csv\excel')
-        if uploaded_file is not None:
+        # if uploaded_file is not None:
         #read csv
-            try:
-                df=pd.read_csv(uploaded_file)
+        try:
+            df = pd.read_csv(url)
 
             #read xls or xlsx
-            except: 
-                try:
-                    df=pd.read_excel(uploaded_file)
-               
-                except:
-                    st.warning('tipo de archivo no reconocido')
+        except: 
+            try:
+                df=pd.read_excel(uploaded_file)
+            
+            except:
+                st.warning('tipo de archivo no reconocido')
                     
 
 
