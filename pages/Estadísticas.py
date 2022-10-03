@@ -1,7 +1,7 @@
 from asyncore import write
 from operator import index
 import profile
-from turtle import title
+
 from pandas_profiling.config import Variables
 import streamlit as st
 
