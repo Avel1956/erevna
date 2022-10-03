@@ -129,15 +129,6 @@ try:
 except:
     st.warning('La (o las) columnas seleccionadas no son adecuadas para este tipo de gráfico')
 
-profile= ProfileReport(df,
-
-            title= "Producción SÉNECA",
-            dataset= {
-                "descripcion": "Este perfil fue generado para uso interno"
-            },
-            variables= {
-
-            }
-            )
+profile= df.profile_report()
 
 st_profile_report(profile)

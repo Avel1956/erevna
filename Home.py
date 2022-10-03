@@ -46,7 +46,7 @@ with st.sidebar:
 #########################################
 #########################################
 
-st.header("Red de colaboracion en productos")
+st.header("Red de colaboración en productos")
 
 with st.expander("Ver todas las combinaciones posibles"):
     df_ini= df.copy()
