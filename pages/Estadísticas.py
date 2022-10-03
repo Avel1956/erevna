@@ -108,7 +108,7 @@ with st.expander("Ver dataframe en memoria"):
     df_ini= df.copy()
     st.write(df_ini)
 
-res_prods = df["SUBPRODUCTO"].value_counts()
+res_prods = df['SUBPRODUCTO'].value_counts()
 n_rows = len(df)
 
 md_results = f"Hasta la fecha la Alianza ha generado **{n_rows:.2f}** nuevos productos:"
