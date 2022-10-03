@@ -22,9 +22,10 @@ def run_query(query):
     dataframe = pd.DataFrame(list(rows))
     return dataframe
 sheet_id= st.secrets['gsheet']
+sheet_name= 'Productos'
+url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
-
-df = pd.read_csv(f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv&sheet={'Productos'}")
+df = pd.read_csv(url)
 
 st.write(df)
 df= pd.DataFrame()
