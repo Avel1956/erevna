@@ -6,3 +6,4 @@ numpy==1.23.3
 streamlit== 1.12.2
 openpyxl
 gsheetsdb
+pandas-profiling
