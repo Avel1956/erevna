@@ -24,7 +24,7 @@ def run_query(query):
 sheet_id= st.secrets['gsheet']
 
 
-df = pd.read_csv(f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv")
+df = pd.read_csv(f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv&sheet={'Productos'}")
 
 st.write(df)
 df= pd.DataFrame()
