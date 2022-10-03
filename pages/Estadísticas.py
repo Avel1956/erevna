@@ -21,7 +21,7 @@ def run_query(query):
     rows = conn.execute(query, headers=0)
     dataframe = pd.DataFrame(list(rows))
     return dataframe
-sheet_id= "1Z0iNrIIMFkt7jtdPLvw4hkObD7-eALUPMNpCWT9-CgI"
+sheet_id= st.secrets('gsheet')
 
 
 df = pd.read_csv(f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv")
