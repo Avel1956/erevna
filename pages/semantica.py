@@ -1,0 +1,123 @@
+from asyncore import write
+from operator import index
+
+
+import streamlit as st
+
+#from st_aggrid import AgGrid
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np
+from funciones import *
+from gsheetsdb import connect
+import pandas_profiling
+from streamlit_pandas_profiling import st_profile_report
+
+
+
+# Create a connection object.
+conn = connect()
+
+# Retorna uin dataframe a partir de un query a google sheets, donde sheet_id es la id única de la hoja y sheet_name el 
+# nombre de la hoja en el libro.
+# st.cache para correrlo solo cuando cambia el query o depues de 10 minutos
+@st.cache(ttl=600)
+def run_query(query):
+    rows = conn.execute(query, headers=0)
+    dataframe = pd.DataFrame(list(rows))
+    return dataframe
+sheet_id= st.secrets['gsheet']
+sheet_name= 'Productos'
+url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
+
+
+
+
+
+try:
+    df_prod= pd.read_pickle('output/master_df.pkl')
+except:
+    df_prod= pd.DataFrame()
+
+try:
+    df_contr= pd.read_pickle('input/contr_source.pkl') 
+except:
+    df_contr= pd.DataFrame()
+
+
+
+
+with st.sidebar:
+    st.header('Red semántica de la Alianza')
+    # st.subheader('Subir archivo excel')
+    # uploaded_file = st.file_uploader('xlsx')             
+    # df=pd.read_excel(uploaded_file, 'Productos')
+    
+    st.subheader('Selección de datos')
+    data= st.radio(
+    "Origen de los datos",
+    ('Hoja principal','Produccion', 'Contractual'))
+
+    if data == 'Produccion':
+        if df_prod is not None:
+
+            df= df_prod
+        else:
+            st.warning('No hay redes de productos en memoria')
+            pass
+    if data== 'Contractual':
+        if df_contr is not None:
+
+            df= df_contr
+        else:
+            st.warning('No hay redes contractuales en memoria')
+            pass
+    if data== 'Hoja principal':
+        df = pd.read_csv(url)
+
+            #read xls or xlsx
+    df['keyw_list']= list(df['keywords'].split(','))
+
+                    
+
+
+
+ 
+        
+    Selec_A= st.selectbox(
+            
+            'Seleccione la columna principal',
+            list(df.columns),
+            key= 'col_y'
+            )
+    Selec_B= st.selectbox(
+            'Seleccione la columna secundaria',
+            df.columns, 
+            key= 'col_x'
+            )
+
+df_str= df.copy()
+
+st.write(df_str)
+with st.expander("Ver dataframe en memoria"):
+    if df.empty==True:
+        st.warning('Importe una tabla de otra página o suba un arhivo de excel.')
+    df_ini= df.copy()
+    st.write(df_ini)
+
+# res_prods = df['SUBPRODUCTO'].value_counts()
+# n_rows = len(df)
+
+# md_results = f"Hasta la fecha la Alianza ha generado **{n_rows:.2f}** nuevos productos:"
+
+# st.markdown(md_results)
+# st.table(res_prods)
+try:
+
+    fig= bar_plot(df, Selec_A)
+    st.pyplot(fig)
+
+except:
+    st.warning('La (o las) columnas seleccionadas no son adecuadas para este tipo de gráfico')
+
