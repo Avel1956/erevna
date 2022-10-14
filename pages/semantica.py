@@ -77,7 +77,7 @@ with st.sidebar:
         df = pd.read_csv(url)
 
             #read xls or xlsx
-    df['keyw_list']= list(df['keywords'].split(','))
+    df['keyw_list']= df['keywords'].str.split(',')
 
                     
 
