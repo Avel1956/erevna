@@ -171,8 +171,9 @@ def find_items_sem(opciones, df):
         else:
             df_subprod= df_final_tiprod.loc[df_final_tiprod['subproducto']== item]
             df_final_subprod= pd.concat([df_final_subprod, df_subprod])
-        
-    st.dataframe(df_final_subprod)        
+
+
+    #st.write(str(df_final_subprod))        
     border_df= df_final_subprod['borders']      
     
     for list in border_df:
