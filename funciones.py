@@ -154,7 +154,7 @@ def find_items_sem(opciones, df):
             
     for item in opciones[1]:
         if item== 'todos':
-            df_final_proy= df_final_net.copy()
+            df_final_proy= df_final_per.copy()
            
         else:
             df_proy= df_final_net.loc[df_final_net['proyecto']== item]
