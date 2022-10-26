@@ -128,6 +128,59 @@ def find_items_contr(opciones, df):
             df_final_gen= pd.concat([df_final_gen, df_gen])
     
     return df_final_gen
+
+
+def find_items_sem(opciones, df):
+    
+    
+    st.write(opciones)
+    #st.write(df['combination'])
+    
+    df_final_per= pd.DataFrame()
+    df_final_net= pd.DataFrame()
+    df_final_proy= pd.DataFrame()
+    df_final_tiprod= pd.DataFrame()
+    df_final_subprod= pd.DataFrame()
+    border_list= [] 
+
+    for item in opciones[0]:
+        if item== 'todos':
+            df_final_per= df
+        else:
+            df_per= df.loc[df['periodo']== item]
+            df_final_per= pd.concat([df_final_per, df_per])
+        
+
+            
+    for item in opciones[1]:
+        if item== 'todos':
+            df_final_proy= df_final_net.copy()
+           
+        else:
+            df_proy= df_final_net.loc[df_final_net['proyecto']== item]
+            df_final_proy= pd.concat([df_final_proy, df_proy])
+    for item in opciones[2]:
+        if item== 'todos':
+            df_final_tiprod= df_final_proy.copy()
+        else:
+            df_tiprod= df_final_proy.loc[df_final_proy['tipo_prod']== item]
+            df_final_tiprod= pd.concat([df_final_tiprod, df_tiprod])
+    for item in opciones[3]:
+        if item== 'todos':
+            df_final_subprod= df_final_tiprod.copy()
+        else:
+            df_subprod= df_final_tiprod.loc[df_final_tiprod['subproducto']== item]
+            df_final_subprod= pd.concat([df_final_subprod, df_subprod])
+        
+    st.write(df_final_subprod)        
+    border_df= df_final_subprod['borders']      
+    
+    for list in border_df:
+        for item in list:
+            border_list.append(item)
+
+    filtered_df= pd.DataFrame(border_list, columns=['source', 'target'])
+    return filtered_df
 #convertir dataframe en csv
 ##
 def convert_df(df):
