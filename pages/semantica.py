@@ -54,7 +54,7 @@ with st.expander("Ver todas las combinaciones posibles"):
 
 st.subheader("Red seleccionada") 
 
-df_sel= find_items_prod(query, df)
+df_sel= find_items_sem(query, df)
 try:
     st.write(df_sel) 
 
