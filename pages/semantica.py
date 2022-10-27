@@ -74,7 +74,7 @@ try:
         list(G.nodes()))
     
     
-    nx.write_graphml_lxml(color_net, "output\\net.graphml")
+    nx.write_graphml_lxml(color_net, "output\\semantica.graphml")
         # #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     # #Cálculo de métricas de la red
     # #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
