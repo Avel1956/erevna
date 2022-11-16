@@ -14,7 +14,7 @@ from funciones import *
 
 df= pd.read_pickle('output/master_df.pkl')
 df['titulos']= df.titulos.astype(str)
-df['Informe de reporte']= df['Informe de reporte'].astype(str)
+
 
 #Opciones por defecto
 
