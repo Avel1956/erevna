@@ -14,10 +14,10 @@ from funciones import *
 
 df= pd.read_pickle('output/master_df.pkl')
 df['titulos']= df.titulos.astype(str)
-
+df['Informe de reporte']= df['Informe de reporte'].astype(str)
 
 #Opciones por defecto
-#Lista de valores unicos de una columna de un dataframe
+
 def unique_sorted_values_plus_ALL(array):
     unique = array.unique().tolist()
     unique.sort()
@@ -28,7 +28,8 @@ with st.sidebar:
     st.title('Visualización de las redes de colaboración de la Alianza SÉNECA')
     st.write('Seleccione el tipo de red')
     periodo = st.multiselect('Seleccione el rango de periodos a consultar',  
-    unique_sorted_values_plus_ALL(df['Informe de reporte']), default= 'todos')
+    ['todos', 2, 3, 4, 5, 6,
+     7, 8, 9, 10], default= 'todos')
     tipo_red= st.multiselect('Tipo(s) de red',['todos', 'aut_net', 'group_net', 'inst_net'], default= 'inst_net')
     proyecto = st.multiselect('Seleccione el (o los) proyectos participantes en la red', 
     ['todos', 'Proy1', 'Proy2', 'Proy3', 'Proy4', 'Proy5', 'Proy6', 'Proy7', 'Proy8', 'Proy9',
