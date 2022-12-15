@@ -151,9 +151,9 @@ try:
     ######inicializar objeto pyvis
     PG = Network(height='600px',
                 width='100%',
-                bgcolor='#020202',
+                bgcolor='#e1eded',
                         
-                font_color='white'
+                font_color='black'
                 ) 
     PG.from_nx(G)
     PG.repulsion(node_distance=420,
