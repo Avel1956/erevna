@@ -92,6 +92,8 @@ try:
     # #Asignacion como atributo de cada nodo
     nx.set_node_attributes(color_net, med_cent, 'betweenness')
     nx.set_node_attributes(color_net, eig_cent, 'eigenvector')
+    # dataframe con las métricas de cada nodo
+    df_node_metrics = pd.DataFrame.from_dict(dict(color_net.nodes(data=True)), orient='index')
 
     # #Diccionario de métricas de nodo seleccionado 
     node_metrics = {'Nodo': [name], 
@@ -173,7 +175,7 @@ try:
             components.html(HtmlFile.read(), height=600)
         except:
             st.warning('no existen redes para la combinacion dada')
-            
+        st.dataframe(saved_nets)   
     with col2:
         st.subheader('Métricas de red')
         
@@ -182,7 +184,7 @@ try:
         st.subheader('Métricas del nodo seleccionado')
         st.dataframe(node_metrics_df)
         st.subheader('Métricas guardadas')
-        st.dataframe(saved_nets)
+        st.dataframe(df_node_metrics)
 
 except:
     st.warning('no existen redes para la combinacion dada')
