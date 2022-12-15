@@ -179,7 +179,9 @@ try:
             components.html(HtmlFile.read(), height=600)
         except:
             st.warning('no existen redes para la combinacion dada')
+        st.subheader('Estas son las redes guardadas')
         st.dataframe(saved_nets)
+        st.subheader('Comunidades presentes en la red')
         st.write(communities)   
     with col2:
         st.subheader('Métricas de red')
