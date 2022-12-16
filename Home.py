@@ -107,7 +107,10 @@ try:
             color_net.nodes[n]['color'] = '#627C85'
         else:
             color_net.nodes[n]['color'] = '#35524A'
-        
+    #give borders the color of the most connected node
+    for e in color_net.edges():
+        color_net.edges[e]['color'] = color_net.nodes[e[0]]['color']
+           
      
     
     #Detection of communities
