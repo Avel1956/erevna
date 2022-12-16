@@ -93,11 +93,22 @@ try:
     nx.set_node_attributes(color_net, med_cent, 'betweenness')
     nx.set_node_attributes(color_net, eig_cent, 'eigenvector')
     nx.set_node_attributes(color_net, (dict_grado), 'size')
-    # Function to change the size of the nodes
-    
+       
     for n in color_net.nodes():
         color_net.nodes[n]['size'] = color_net.nodes[n]['size']*2
-      
+        #color by size
+        if color_net.nodes[n]['size'] < 10:
+            color_net.nodes[n]['color'] = 'blue'
+        elif color_net.nodes[n]['size'] < 20:
+            color_net.nodes[n]['color'] = 'green'
+        elif color_net.nodes[n]['size'] < 30:
+            color_net.nodes[n]['color'] = 'yellow'
+        elif color_net.nodes[n]['size'] < 40:
+            color_net.nodes[n]['color'] = 'orange'
+        else:
+            color_net.nodes[n]['color'] = 'red'
+        
+     
     
     #Detection of communities
     communities = list(greedy_modularity_communities(color_net))
