@@ -98,15 +98,15 @@ try:
         color_net.nodes[n]['size'] = color_net.nodes[n]['size']*2
         #color by size
         if color_net.nodes[n]['size'] < 10:
-            color_net.nodes[n]['color'] = '#32DE8A'
+            color_net.nodes[n]['color'] = '#ff6950'
         elif color_net.nodes[n]['size'] < 20:
-            color_net.nodes[n]['color'] = '#A2E8DD'
+            color_net.nodes[n]['color'] = '#fe8568'
         elif color_net.nodes[n]['size'] < 30:
-            color_net.nodes[n]['color'] = '#779CAB'
+            color_net.nodes[n]['color'] = '#3c2b35'
         elif color_net.nodes[n]['size'] < 40:
-            color_net.nodes[n]['color'] = '#627C85'
+            color_net.nodes[n]['color'] = '#22191f'
         else:
-            color_net.nodes[n]['color'] = '#35524A'
+            color_net.nodes[n]['color'] = '#170f13'
     #give borders the color of the most connected node
     for e in color_net.edges():
         color_net.edges[e]['color'] = color_net.nodes[e[0]]['color']
