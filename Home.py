@@ -96,7 +96,7 @@ try:
     # Function to change the size of the nodes
     
     for n in color_net.nodes():
-        color_net.nodes[n]['size'] = color_net.nodes[n]['size']*10
+        color_net.nodes[n]['size'] = color_net.nodes[n]['size']*2
       
     
     #Detection of communities
