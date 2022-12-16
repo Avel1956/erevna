@@ -98,7 +98,7 @@ try:
         color_net.nodes[n]['size'] = color_net.nodes[n]['size']*2
         #color by size
         if color_net.nodes[n]['size'] < 10:
-            color_net.nodes[n]['color'] = 'blue'
+            color_net.nodes[n]['color'] = '#A2E8DD'
         elif color_net.nodes[n]['size'] < 20:
             color_net.nodes[n]['color'] = 'green'
         elif color_net.nodes[n]['size'] < 30:
