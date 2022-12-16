@@ -110,7 +110,7 @@ try:
     #give borders the color of the most connected node
     for e in color_net.edges():
         color_net.edges[e]['color'] = color_net.nodes[e[0]]['color']
-           
+
      
     
     #Detection of communities
@@ -172,7 +172,7 @@ try:
     ######inicializar objeto pyvis
     PG = Network(height='600px',
                 width='100%',
-                bgcolor='#e1eded',
+                bgcolor='#FFFFFF',
                         
                 font_color='black'
                 ) 
