@@ -92,7 +92,7 @@ try:
     # #Asignacion como atributo de cada nodo
     nx.set_node_attributes(color_net, med_cent, 'betweenness')
     nx.set_node_attributes(color_net, eig_cent, 'eigenvector')
-    nx.set_node_attributes(color_net, dict_grado, 'size')
+    nx.set_node_attributes(color_net, (dict_grado*10), 'size')
 
     
     #Detection of communities
