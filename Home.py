@@ -92,6 +92,9 @@ try:
     # #Asignacion como atributo de cada nodo
     nx.set_node_attributes(color_net, med_cent, 'betweenness')
     nx.set_node_attributes(color_net, eig_cent, 'eigenvector')
+    nx.set_node_attributes(color_net, dict_grado, 'size')
+
+    
     #Detection of communities
     communities = list(greedy_modularity_communities(color_net))
     
@@ -195,4 +198,6 @@ try:
 
 except:
     st.warning('no existen redes para la combinacion dada')
+ 
+ #Add a streamlit tab with a glossary of terms
  
