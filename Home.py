@@ -98,15 +98,15 @@ try:
         color_net.nodes[n]['size'] = color_net.nodes[n]['size']*2
         #color by size
         if color_net.nodes[n]['size'] < 10:
-            color_net.nodes[n]['color'] = '#A2E8DD'
+            color_net.nodes[n]['color'] = '#32DE8A'
         elif color_net.nodes[n]['size'] < 20:
-            color_net.nodes[n]['color'] = 'green'
+            color_net.nodes[n]['color'] = '#A2E8DD'
         elif color_net.nodes[n]['size'] < 30:
-            color_net.nodes[n]['color'] = 'yellow'
+            color_net.nodes[n]['color'] = '#779CAB'
         elif color_net.nodes[n]['size'] < 40:
-            color_net.nodes[n]['color'] = 'orange'
+            color_net.nodes[n]['color'] = '#627C85'
         else:
-            color_net.nodes[n]['color'] = 'red'
+            color_net.nodes[n]['color'] = '#35524A'
         
      
     
