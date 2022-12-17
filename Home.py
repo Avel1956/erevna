@@ -219,7 +219,7 @@ try:
         st.dataframe(node_metrics_df)
         st.subheader('Métricas guardadas')
         #show histogram
-        st.image('output\\hist_grado.png')
+        #st.image('output\\hist_grado.png')
         st.dataframe(df_node_metrics)
 
 except:
