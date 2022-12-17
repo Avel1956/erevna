@@ -248,3 +248,20 @@ def bar_plot(df, x):
     ax.set_xticklabels(ax.get_xticklabels(), rotation=40, ha="right")
     #fig.legend(loc='upper right')
     return fig
+
+# Funcion que devielve un histograma basado en un atributo de los nodos de la red
+##
+def hist_plot(G, attr):
+    custom_style = {'axes.labelcolor': 'gray',
+                'grid.color': 'None',
+                'axes.edgecolor': 'gray',
+                'axes.facecolor': 'None',
+                'grid.color': 'gray',
+                'xtick.color': 'gray',
+                'ytick.color': 'grey'}
+    sns.set_style("dark", rc=custom_style)
+    fig = plt.figure(figsize=(10, 4))
+    fig.patch.set_facecolor('None')
+    ax= sns.histplot(G.nodes(data= True), x= attr, kde= True)
+    ax.set_xticklabels(ax.get_xticklabels(), rotation=40, ha="right")
+    return fig

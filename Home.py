@@ -141,6 +141,12 @@ try:
     # #Dataframe de métricas de la red para representación  
     red_metrics_df = red_metrics(color_net, query)
 
+    #histograma de grado de los nodos de la red
+    hist_grado = hist_plot(color_net, 'grado')
+    #save figure
+    hist_grado.savefig('output\\hist_grado.png')
+
+  
     #######
     ###Guardar metricas con un nombre específico
     #######
@@ -212,6 +218,8 @@ try:
         st.subheader('Métricas del nodo seleccionado')
         st.dataframe(node_metrics_df)
         st.subheader('Métricas guardadas')
+        #show histogram
+        st.image('output\\hist_grado.png')
         st.dataframe(df_node_metrics)
 
 except:
