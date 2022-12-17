@@ -144,7 +144,7 @@ try:
     #histograma de grado de los nodos de la red
     hist_grado = hist_plot(color_net, 'grado')
     #save figure
-    hist_grado.savefig('output\\hist_grado.png')
+    #hist_grado.savefig('output\\hist_grado.png')
 
   
     #######
